@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>SignUp</title>
+</head>
+<body>
+    
+    <form onsubmit="return checkValidation()" action="home.html">
+        <div class="input-cont">
+            <label for="firstName" class="label" id="pFirstName" >First Name</label>
+            <input  placeholder="enter your name"  id="firstName" class="text-box" type="text">
+        </div>
+
+        <div class="input-cont">
+            <label for="lastName" class="label" id="pLastName">Last Name</label>
+            <input placeholder="enter your last name" id="lastName" class="text-box" type="text">
+        </div>
+        
+        <div class="input-cont">
+            <label for="emailValue" class="label" id="pEmail">Email</label>
+            <input placeholder="------@gmail.com" id="emailValue" class="text-box"type="text">
+        </div>
+
+        <div class="input-cont">
+            <label for="phoneNumber" class="label"  id="pPhoneNumber">Phone Number</label>
+            <input placeholder="01--------" id="phoneNumber" class="text-box"type="text">
+        </div>
+
+        
+        <div class="input-cont">
+            <label for="password" class="label" id="pPassword">Password</label>
+            <input id="password" class="text-box" type="text">
+        </div>
+        
+        <div class="input-cont">
+            <label for="confirmPassword" class="label" id="pConfirmPassword">Confirm Password</label>
+            <input id="confirmPassword" class="text-box" type="text">
+        </div>
+        
+        <div class="input-cont">
+            <label for="birthday" class="label" id="pBirthday" >Birthday</label>
+            <input id="birthday" class="text-box" type="date">
+        </div>
+
+        <div class="input-cont">
+            <label for="gender" id="pGender" class="label">Gender</label>
+            <select id="gender" class="text-box" >
+            <option value=""></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            </select>
+        </div>
+
+
+<div class="sub-cont">
+    <input class="submet-btn" type="submit" value="Sign Up">
+</div>
+    </form> 
+
+
+    <script src="index.js"></script>
+</body>
+</html>

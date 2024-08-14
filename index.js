@@ -6,7 +6,9 @@ let phoneNumber = document.getElementById("phoneNumber");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirmPassword");
 let birthday = document.getElementById("birthday");
-let gender = document.getElementById("gender")
+let male = document.getElementById("male");
+let female = document.getElementById("female");
+
 
 //Declaration of labels
 let pFirstName = document.getElementById("pFirstName");
@@ -54,72 +56,58 @@ function checkValidation() {
         popError("pFirstName", "enter valid name");
         return false;
     }
-    else{
-    reset();
-    }
 
     //check last name
-    if(lastName.value.trim() === "" || lastName.value[0] != lastName.value[0].toUpperCase() || lastName.value.length < 3 || lastName.value.trim().includes(" ")){
-        popError("pLastName", "enter valid name");
-        return false;
-    }
-    else{
-        reset();
+    else if (lastName.value.trim() === "" || lastName.value[0] != lastName.value[0].toUpperCase() || lastName.value.length < 3 || lastName.value.trim().includes(" ")){
+    reset();
+    popError("pLastName", "enter valid name");
+    return false;
     }
 
     //check Email
-    if(email.value.trim().endsWith("@gmail.com") == false || email.value.trim() === "" ){
+    else if(email.value.trim().endsWith("@gmail.com") == false || email.value.trim() === "" ){
+        reset();
         popError("pEmail", "enter valid Email");
         return false;
     }
-    else{
-        reset();
-    }
 
     //check phone Number
-    if(phoneNumber.value.trim().startsWith("01") == false || phoneNumber.value.trim().length !== 11 || phoneNumber.value.trim() === "" ){
+    else if(phoneNumber.value.trim().startsWith("01") == false || phoneNumber.value.trim().length !== 11 || phoneNumber.value.trim() === "" ){
+        reset();
         popError("pPhoneNumber", "enter valid Number");
         return false;
     }
-    else{
-        reset();
-    }
-
-    
+   
     //check password
-    if(  password.value.trim() === "" ){
+    else if(  password.value.trim() === "" ){
+        reset();
         popError("pPassword", "enter valid password");
         return false;
     }
-    else{
-        reset();
-    }
+    
 
     //check confirm password
-    if(  password.value !== confirmPassword.value){
+    else if(  password.value !== confirmPassword.value){
+        reset();
         popError("pConfirmPassword", "passwords doesn't match");
         return false;
     }
-    else{
-        reset();
-    }
+   
     //check Birthday
-    if(  birthday.value == ""){
+    else if(  birthday.value == ""){
+        reset();
         popError("pBirthday", "please, enter your Birthday");
         return false;
     }
-    else{
-        reset();
-    }
-
 
     //check Gender
-    if(  gender.value == ""){
+    else if( male.checked == false && male.checked == false){
+        reset();
         popError("pGender", "please, enter your Gender");
         return false;
     }
 
     else{
-        reset();
+        return true;
     }
 }

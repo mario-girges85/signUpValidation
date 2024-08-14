@@ -32,12 +32,12 @@
         
         <div class="input-cont">
             <label for="password" class="label" id="pPassword">Password</label>
-            <input id="password" class="text-box" type="text">
+            <input id="password" class="text-box" type="password">
         </div>
         
         <div class="input-cont">
             <label for="confirmPassword" class="label" id="pConfirmPassword">Confirm Password</label>
-            <input id="confirmPassword" class="text-box" type="text">
+            <input id="confirmPassword" class="text-box" type="password">
         </div>
         
         <div class="input-cont">
@@ -46,12 +46,17 @@
         </div>
 
         <div class="input-cont">
-            <label for="gender" id="pGender" class="label">Gender</label>
-            <select id="gender" class="text-box" >
-            <option value=""></option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            </select>
+            <label  class="label" id="pGender">choose Gender</label>
+
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+            </div>
+            
         </div>
 
 

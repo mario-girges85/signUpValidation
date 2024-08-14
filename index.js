@@ -101,7 +101,7 @@ function checkValidation() {
     }
 
     //check Gender
-    else if( male.checked == false && male.checked == false){
+    else if( male.checked == false && female.checked == false){
         reset();
         popError("pGender", "please, enter your Gender");
         return false;
